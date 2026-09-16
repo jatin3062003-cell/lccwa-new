@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who We Are | LCCWA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    fontFamily: { display: ['"Bricolage Grotesque"', 'sans-serif'], sans: ['"Nunito Sans"', 'sans-serif'] },
+    colors: { navy: '#0a1f44', royal: '#1d4ed8', sky: '#38bdf8', ice: '#eff6ff', mist: '#dbeafe', navy2: '#12295a' }
+  } }
+}
+</script>
+<style>
+  .hero-bg { background: radial-gradient(circle at 85% 10%, rgba(56,189,248,.35), transparent 45%), radial-gradient(circle at 5% 90%, rgba(29,78,216,.6), transparent 50%), #0a1f44; }
+  @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+  .rise { animation: rise .8s ease-out both; }
+  .rise-2 { animation-delay: .15s; } .rise-3 { animation-delay: .3s; }
+  @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  .floaty { animation: floaty 5s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce) { .rise, .floaty { animation: none; } }
+  :focus-visible { outline: 3px solid #38bdf8; outline-offset: 2px; }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  h1,h2,h3,h4{font-family:"Bricolage Grotesque",sans-serif;letter-spacing:-.01em}
+  .bg-navy .text-royal,.hero-bg .text-royal,.bg-royal .text-royal{color:#7dd3fc}
+  main .shadow-sm,main .shadow-xl{transition:transform .2s,box-shadow .2s}
+  main .shadow-sm:hover{transform:translateY(-3px);box-shadow:0 14px 28px -10px rgba(29,78,216,.3)}
+</style>
+</head>
+<body class="bg-ice text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-sky text-navy px-4 py-2 rounded shadow font-semibold z-50">Skip to main content</a>
+<header class="bg-navy text-white sticky top-0 z-50 shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+    <a href="index.html" class="flex items-center gap-3">
+      <span class="w-10 h-10 rounded-xl bg-sky text-navy grid place-items-center font-display font-extrabold">L</span>
+      <span class="font-display text-2xl font-extrabold tracking-wide">LCCWA</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-7 text-sm font-semibold">
+      <a href="index.html" class="hover:text-sky transition-colors py-2">Home</a>
+      <div class="relative group py-2">
+        <button class="flex items-center gap-1 text-sky border-b-2 border-sky transition-colors" aria-haspopup="true">About Us
+          <svg class="w-4 h-4 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="absolute left-0 pt-2 w-48 hidden group-hover:block group-focus-within:block">
+          <div class="bg-white rounded-xl shadow-xl py-2 text-navy">
+            <a href="who-we-are.html" class="block px-4 py-2 text-sm bg-mist text-royal font-bold hover:text-royal">Who We Are</a>
+            <a href="our-leadership.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Our Leadership</a>
+            <a href="newsletters.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Newsletters</a>
+          </div>
+        </div>
+      </div>
+      <div class="relative group py-2">
+        <button class="flex items-center gap-1 hover:text-sky transition-colors" aria-haspopup="true">Our Programs
+          <svg class="w-4 h-4 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="absolute left-0 pt-2 w-56 hidden group-hover:block group-focus-within:block">
+          <div class="bg-white rounded-xl shadow-xl py-2 text-navy">
+            <a href="academic-program.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Academic Program</a>
+            <a href="shakti-program.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Shakti Program</a>
+            <a href="soft-skills-program.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Soft Skills Program</a>
+            <a href="ankur-program.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Ankur Program</a>
+          </div>
+        </div>
+      </div>
+      <a href="contact.html" class="hover:text-sky transition-colors py-2">Contact Us</a>
+      <a href="contact.html" class="bg-sky text-navy font-bold px-5 py-2.5 rounded-full hover:bg-white transition-colors">Support a Child</a>
+    </nav>
+
+    <button id="menu-btn" type="button" class="md:hidden text-sky" aria-label="Toggle navigation menu">
+      <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-navy border-t border-white/10 px-4 pt-2 pb-5 space-y-1">
+    <a href="index.html" class="block py-2 font-semibold">Home</a>
+    <button id="mobile-about-btn" class="w-full flex justify-between items-center py-2 font-semibold text-sky">About Us
+      <svg id="mobile-about-arrow" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </button>
+    <div id="mobile-about-submenu" class="hidden pl-4 border-l-2 border-sky space-y-1">
+      <a href="who-we-are.html" class="block py-1.5 text-sm text-blue-100">Who We Are</a>
+      <a href="our-leadership.html" class="block py-1.5 text-sm text-blue-100">Our Leadership</a>
+      <a href="newsletters.html" class="block py-1.5 text-sm text-blue-100">Newsletters</a>
+    </div>
+    <button id="mobile-programs-btn" class="w-full flex justify-between items-center py-2 font-semibold">Our Programs
+      <svg id="mobile-programs-arrow" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </button>
+    <div id="mobile-programs-submenu" class="hidden pl-4 border-l-2 border-sky space-y-1">
+      <a href="academic-program.html" class="block py-1.5 text-sm text-blue-100">Academic Program</a>
+      <a href="shakti-program.html" class="block py-1.5 text-sm text-blue-100">Shakti Program</a>
+      <a href="soft-skills-program.html" class="block py-1.5 text-sm text-blue-100">Soft Skills Program</a>
+      <a href="ankur-program.html" class="block py-1.5 text-sm text-blue-100">Ankur Program</a>
+    </div>
+    <a href="contact.html" class="block py-2 font-semibold">Contact Us</a>
+    <a href="contact.html" class="block text-center bg-sky text-navy font-bold px-5 py-3 rounded-full mt-2">Support a Child</a>
+  </div>
+</header>
+<main id="main-content" class="flex-grow">
+        
+        <div class="hero-bg text-white py-16 px-6 text-center border-b border-blue-900">
+            <div class="container mx-auto max-w-3xl">
+                <span class="bg-sky text-navy text-xs uppercase font-extrabold px-3 py-1 rounded-full tracking-widest shadow-sm">About Our Organization</span>
+                <h1 class="text-3xl md:text-5xl font-black mt-3 mb-3 tracking-tight">Who We Are</h1>
+                <p class="text-gray-400 text-sm md:text-base max-w-xl mx-auto leading-relaxed">Educate. Heal. Feed. — Uplifting communities and shaping the proactive citizens of tomorrow.</p>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 py-16 max-w-5xl">
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-blue-100">
+                <div class="space-y-6 max-w-3xl">
+                    <h2 class="text-2xl md:text-3xl font-black text-navy tracking-tight">Our Origin Story</h2>
+                    <div class="w-12 h-1 bg-sky rounded-full"></div>
+                    
+                    <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+                        <strong>LCCWA (Life Care & Child Welfare Association)</strong> was founded in 2012 by a group of eminent citizens of Powai, including retired professors of <strong>IIT Bombay</strong>, to work deliberately towards the development and holistic upliftment of children living in nearby marginalized areas.
+                    </p>
+                    
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        LCCWA enables comprehensive all-round growth by providing consistent daily classroom coaching, weekly computer training labs, free freshly cooked nutritious meals every single evening, and regular preventive health check-ups paired with sanitation and hygiene education. 
+                    </p>
+
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Apart from systematically improving localized academic test performance, our center purposefully lowers school dropout rates and directly imparts vital social communication workflows alongside a positive, humane value system. We believe these durable foundational qualities are what truly empower children to transform into responsible and proactive citizens of the country.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-sky text-navy py-16 px-6 border-t border-b border-sky/30">
+            <div class="container mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <div class="md:col-span-1 border-b md:border-b-0 md:border-r border-blue-900 pb-4 md:pb-0">
+                    <span class="text-xs uppercase font-extrabold tracking-widest text-navy block">The Directive Mandate</span>
+                    <h2 class="text-3xl font-black tracking-tight mt-1">Our Mission</h2>
+                </div>
+                <div class="md:col-span-2 space-y-3">
+                    <p class="text-sm md:text-base font-bold leading-relaxed">
+                        Our mission is to provide consistent academic, emotional, and nutritional support to children from Powai’s marginalized sections. We strive to facilitate holistic development to children who come from economically challenged backgrounds.
+                    </p>
+                    <p class="text-xs md:text-sm text-navy font-medium leading-relaxed">
+                        We firmly believe there is absolutely no lack of natural talent in children from any background; what they need more than anything, however, is a safe, compassionate, and nurturing ecosystem where they can easily discover and tap into their immense latent potential.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-mist/60 py-16 border-b border-blue-100">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-2xl md:text-3xl font-black text-navy tracking-tight">Our Core Values</h2>
+                    <p class="text-xs text-gray-500 uppercase font-bold tracking-widest mt-2">The ethical cornerstones behind every initiative</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-100 flex items-start space-x-4">
+                        <div class="bg-mist text-royal p-3 rounded-lg flex-shrink-0"><i class="fa-solid fa-hand-holding-heart text-lg"></i></div>
+                        <div>
+                            <h4 class="font-extrabold text-navy text-sm mb-1">Compassion and Care</h4>
+                            <p class="text-xs text-gray-600 leading-relaxed">We treat every individual child with total kindness and profound respect, putting their long-term health, psychological wellbeing, and individual growth directly at the heart of all we do.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-100 flex items-start space-x-4">
+                        <div class="bg-sky-100 text-sky-600 p-3 rounded-lg flex-shrink-0"><i class="fa-solid fa-shield-halved text-lg"></i></div>
+                        <div>
+                            <h4 class="font-extrabold text-navy text-sm mb-1">Integrity and Discipline</h4>
+                            <p class="text-xs text-gray-600 leading-relaxed">We act with absolute structural fairness, accountability, and organizational responsibility, curating a completely safe, stable, and transparent learning environment.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-100 flex items-start space-x-4">
+                        <div class="bg-blue-100 text-blue-600 p-3 rounded-lg flex-shrink-0"><i class="fa-solid fa-users text-lg"></i></div>
+                        <div>
+                            <h4 class="font-extrabold text-navy text-sm mb-1">Active Collaboration</h4>
+                            <p class="text-xs text-gray-600 leading-relaxed">We build deeply rooted alignments alongside neighborhood families, institutional educators, and external community partners to support children and cement lasting generational impact.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-100 flex items-start space-x-4">
+                        <div class="bg-indigo-100 text-indigo-600 p-3 rounded-lg flex-shrink-0"><i class="fa-solid fa-star text-lg"></i></div>
+                        <div>
+                            <h4 class="font-extrabold text-navy text-sm mb-1">Excellence and Learning</h4>
+                            <p class="text-xs text-gray-600 leading-relaxed">We continually strive for premier quality programs and transparent metric outcomes, effectively blending daily education formats with functional real-world workforce competencies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+  <!-- Call to action -->
+  <section class="px-4 sm:px-6 lg:px-8 pb-20">
+    <div class="max-w-7xl mx-auto hero-bg text-white rounded-3xl px-8 py-14 text-center space-y-5 shadow-xl">
+      <h2 class="font-display text-3xl sm:text-4xl font-extrabold">Help us write the next success story</h2>
+      <p class="text-blue-100 max-w-xl mx-auto">Volunteer your time, sponsor a child's learning, or partner with us. Every bit of support helps a student go further.</p>
+      <div class="flex flex-wrap gap-3 justify-center pt-2">
+        <a href="contact.html" class="bg-sky text-navy font-bold px-7 py-3.5 rounded-full hover:bg-white transition">Get involved</a>
+        <a href="newsletters.html" class="border-2 border-white/40 font-bold px-7 py-3.5 rounded-full hover:bg-white/10 transition">Read our newsletters</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="bg-navy text-blue-200 text-sm py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <p>&copy; 2026 Life Care &amp; Child Welfare Association (LCCWA). All rights reserved.</p>
+    <div class="flex gap-6">
+      <a href="index.html" class="hover:text-sky transition-colors">Home</a>
+      <a href="who-we-are.html" class="hover:text-sky transition-colors">About Us</a>
+      <a href="academic-program.html" class="hover:text-sky transition-colors">Our Programs</a>
+      <a href="contact.html" class="hover:text-sky transition-colors">Contact Us</a>
+    </div>
+  </div>
+</footer>
+<script>
+  const $ = id => document.getElementById(id);
+  $('menu-btn').addEventListener('click', () => $('mobile-menu').classList.toggle('hidden'));
+  [['about'], ['programs']].forEach(([k]) => {
+    $(`mobile-${k}-btn`).addEventListener('click', () => {
+      $(`mobile-${k}-submenu`).classList.toggle('hidden');
+      $(`mobile-${k}-arrow`).classList.toggle('rotate-180');
+    });
+  });
+</script>
+
+</body>
+</html>

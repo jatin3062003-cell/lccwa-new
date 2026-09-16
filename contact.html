@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - LCCWA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    fontFamily: { display: ['"Bricolage Grotesque"', 'sans-serif'], sans: ['"Nunito Sans"', 'sans-serif'] },
+    colors: { navy: '#0a1f44', royal: '#1d4ed8', sky: '#38bdf8', ice: '#eff6ff', mist: '#dbeafe', navy2: '#12295a' }
+  } }
+}
+</script>
+<style>
+  .hero-bg { background: radial-gradient(circle at 85% 10%, rgba(56,189,248,.35), transparent 45%), radial-gradient(circle at 5% 90%, rgba(29,78,216,.6), transparent 50%), #0a1f44; }
+  @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+  .rise { animation: rise .8s ease-out both; }
+  .rise-2 { animation-delay: .15s; } .rise-3 { animation-delay: .3s; }
+  @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  .floaty { animation: floaty 5s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce) { .rise, .floaty { animation: none; } }
+  :focus-visible { outline: 3px solid #38bdf8; outline-offset: 2px; }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  h1,h2,h3,h4{font-family:"Bricolage Grotesque",sans-serif;letter-spacing:-.01em}
+  .bg-navy .text-royal,.hero-bg .text-royal,.bg-royal .text-royal{color:#7dd3fc}
+  main .shadow-sm,main .shadow-xl{transition:transform .2s,box-shadow .2s}
+  main .shadow-sm:hover{transform:translateY(-3px);box-shadow:0 14px 28px -10px rgba(29,78,216,.3)}
+</style>
+</head>
+<body class="bg-ice text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-sky text-navy px-4 py-2 rounded shadow font-semibold z-50">Skip to main content</a>
+<header class="bg-navy text-white sticky top-0 z-50 shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+    <a href="index.html" class="flex items-center gap-3">
+      <span class="w-10 h-10 rounded-xl bg-sky text-navy grid place-items-center font-display font-extrabold">L</span>
+      <span class="font-display text-2xl font-extrabold tracking-wide">LCCWA</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-7 text-sm font-semibold">
+      <a href="index.html" class="hover:text-sky transition-colors py-2">Home</a>
+      <div class="relative group py-2">
+        <button class="flex items-center gap-1 hover:text-sky transition-colors" aria-haspopup="true">About Us
+          <svg class="w-4 h-4 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="absolute left-0 pt-2 w-48 hidden group-hover:block group-focus-within:block">
+          <div class="bg-white rounded-xl shadow-xl py-2 text-navy">
+            <a href="who-we-are.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Who We Are</a>
+            <a href="our-leadership.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Our Leadership</a>
+            <a href="newsletters.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Newsletters</a>
+          </div>
+        </div>
+      </div>
+      <div class="relative group py-2">
+        <button class="flex items-center gap-1 hover:text-sky transition-colors" aria-haspopup="true">Our Programs
+          <svg class="w-4 h-4 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="absolute left-0 pt-2 w-56 hidden group-hover:block group-focus-within:block">
+          <div class="bg-white rounded-xl shadow-xl py-2 text-navy">
+            <a href="academic-program.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Academic Program</a>
+            <a href="shakti-program.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Shakti Program</a>
+            <a href="soft-skills-program.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Soft Skills Program</a>
+            <a href="ankur-program.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Ankur Program</a>
+          </div>
+        </div>
+      </div>
+      <a href="contact.html" class="text-sky border-b-2 border-sky py-2">Contact Us</a>
+      <a href="contact.html" class="bg-sky text-navy font-bold px-5 py-2.5 rounded-full hover:bg-white transition-colors">Support a Child</a>
+    </nav>
+
+    <button id="menu-btn" type="button" class="md:hidden text-sky" aria-label="Toggle navigation menu">
+      <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-navy border-t border-white/10 px-4 pt-2 pb-5 space-y-1">
+    <a href="index.html" class="block py-2 font-semibold">Home</a>
+    <button id="mobile-about-btn" class="w-full flex justify-between items-center py-2 font-semibold">About Us
+      <svg id="mobile-about-arrow" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </button>
+    <div id="mobile-about-submenu" class="hidden pl-4 border-l-2 border-sky space-y-1">
+      <a href="who-we-are.html" class="block py-1.5 text-sm text-blue-100">Who We Are</a>
+      <a href="our-leadership.html" class="block py-1.5 text-sm text-blue-100">Our Leadership</a>
+      <a href="newsletters.html" class="block py-1.5 text-sm text-blue-100">Newsletters</a>
+    </div>
+    <button id="mobile-programs-btn" class="w-full flex justify-between items-center py-2 font-semibold">Our Programs
+      <svg id="mobile-programs-arrow" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </button>
+    <div id="mobile-programs-submenu" class="hidden pl-4 border-l-2 border-sky space-y-1">
+      <a href="academic-program.html" class="block py-1.5 text-sm text-blue-100">Academic Program</a>
+      <a href="shakti-program.html" class="block py-1.5 text-sm text-blue-100">Shakti Program</a>
+      <a href="soft-skills-program.html" class="block py-1.5 text-sm text-blue-100">Soft Skills Program</a>
+      <a href="ankur-program.html" class="block py-1.5 text-sm text-blue-100">Ankur Program</a>
+    </div>
+    <a href="contact.html" class="block py-2 font-semibold text-sky">Contact Us</a>
+    <a href="contact.html" class="block text-center bg-sky text-navy font-bold px-5 py-3 rounded-full mt-2">Support a Child</a>
+  </div>
+</header>
+<main id="main-content" class="flex-grow">
+        
+        <section class="hero-bg text-white py-16 md:py-20 text-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+                <h1 class="text-4xl font-black tracking-tight">Contact Us</h1>
+                <p class="text-slate-400 text-sm max-w-lg mx-auto leading-relaxed">
+                    Get in touch with us to participate, partner, volunteer, or support our operations across underprivileged communities in Powai.
+                </p>
+                <div class="w-12 h-1 bg-sky mx-auto rounded mt-2"></div>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-white rounded-3xl border border-blue-100 p-8 shadow-xs flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-10 h-10 rounded-lg bg-mist text-royal flex items-center justify-center">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        </div>
+                        <h2 class="text-lg font-bold text-navy tracking-tight">Our Address</h2>
+                        <p class="text-slate-600 text-sm leading-relaxed font-medium">
+                            Shop no. 112, Bhavani Industrial,<br>
+                            Hare Krishna Road,<br>
+                            Opp Jain Mandir Road,<br>
+                            Powai 400076
+                        </p>
+                    </div>
+                    <span class="text-xs font-bold text-royal mt-6 tracking-wide uppercase">Main Office & Center</span>
+                </div>
+
+                <div class="bg-white rounded-3xl border border-blue-100 p-8 shadow-xs flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-10 h-10 rounded-lg bg-mist text-royal flex items-center justify-center">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        </div>
+                        <h2 class="text-lg font-bold text-navy tracking-tight">Email Channels</h2>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            For general communications, scheduling queries, and feedback, email:
+                        </p>
+                        <a href="mailto:lccwa.powai@gmail.com" class="block font-bold text-navy hover:text-royal transition-colors text-sm break-all">
+                            lccwa.powai@gmail.com
+                        </a>
+                    </div>
+                    <span class="text-xs font-bold text-royal mt-6 tracking-wide uppercase">Digital Correspondence</span>
+                </div>
+
+                <div class="bg-white rounded-3xl border border-blue-100 p-8 shadow-xs flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-10 h-10 rounded-lg bg-mist text-royal flex items-center justify-center">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        </div>
+                        <h2 class="text-lg font-bold text-navy tracking-tight">Phone Contacts</h2>
+                        <div class="space-y-3 pt-1">
+                            <div class="text-xs">
+                                <span class="block text-slate-400 font-medium">Office Administrator</span>
+                                <a href="tel:+919769474785" class="text-sm font-bold text-navy hover:text-royal transition-colors">+91 97694 74785</a>
+                            </div>
+                            <div class="text-xs">
+                                <span class="block text-slate-400 font-medium">CSR Details Contact</span>
+                                <a href="tel:+919930813369" class="text-sm font-bold text-navy hover:text-royal transition-colors">+91 99308 13369</a>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="text-xs font-bold text-royal mt-6 tracking-wide uppercase">Inquiries Desk</span>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-mist border-t border-b border-blue-100 py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+                <div class="text-center space-y-2">
+                    <h2 class="text-2xl font-bold text-navy tracking-tight">Organization’s Statutory Details</h2>
+                    <p class="text-xs text-slate-500 uppercase tracking-widest font-semibold">Official Corporate Registration & Transparency Compliance</p>
+                    <div class="w-12 h-0.5 bg-sky mx-auto rounded"></div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-sm border border-blue-100 overflow-hidden divide-y divide-blue-100">
+                    <div class="p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-3 gap-2">
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-wider sm:pt-0.5">Registered Office</span>
+                        <span class="text-sm text-navy font-medium sm:col-span-2">503, Whispering Woods, Powai Vihar, Bldg 3, Powai, Mumbai-400076</span>
+                    </div>
+                    <div class="p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-3 gap-2">
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-wider sm:pt-0.5">PAN Number</span>
+                        <span class="text-sm text-navy font-mono font-bold tracking-wide sm:col-span-2">AABAL4153B</span>
+                    </div>
+                    <div class="p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-3 gap-2">
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-wider sm:pt-0.5">Public Trust Registration</span>
+                        <span class="text-sm text-navy font-medium sm:col-span-2">Maharashtra State, Mumbai 2652/2012 G.B.BS.D<br><span class="text-xs text-slate-400 font-normal">Date: 10th December 2012</span></span>
+                    </div>
+                    <div class="p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-3 gap-2">
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-wider sm:pt-0.5">12A Registration</span>
+                        <span class="text-sm text-navy font-medium font-mono sm:col-span-2">CIT (Exemptions) Mumbai /2025-26/12AA/21087</span>
+                    </div>
+                    <div class="p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-3 gap-2">
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-wider sm:pt-0.5">80G Tax Exemption Status</span>
+                        <span class="text-sm text-navy font-medium sm:col-span-2">Approved on 27th March 2026<br><span class="text-xs text-sky-600 font-semibold tracking-wide uppercase">Valid Cycle: 2027-28 to 2031-32</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+<footer class="bg-navy text-blue-200 text-sm py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <p>&copy; 2026 Life Care &amp; Child Welfare Association (LCCWA). All rights reserved.</p>
+    <div class="flex gap-6">
+      <a href="index.html" class="hover:text-sky transition-colors">Home</a>
+      <a href="who-we-are.html" class="hover:text-sky transition-colors">About Us</a>
+      <a href="academic-program.html" class="hover:text-sky transition-colors">Our Programs</a>
+      <a href="contact.html" class="hover:text-sky transition-colors">Contact Us</a>
+    </div>
+  </div>
+</footer>
+<script>
+  const $ = id => document.getElementById(id);
+  $('menu-btn').addEventListener('click', () => $('mobile-menu').classList.toggle('hidden'));
+  [['about'], ['programs']].forEach(([k]) => {
+    $(`mobile-${k}-btn`).addEventListener('click', () => {
+      $(`mobile-${k}-submenu`).classList.toggle('hidden');
+      $(`mobile-${k}-arrow`).classList.toggle('rotate-180');
+    });
+  });
+</script>
+
+</body>
+</html>

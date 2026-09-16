@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LCCWA | Get Involved - Support Our Cause</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    fontFamily: { display: ['"Bricolage Grotesque"', 'sans-serif'], sans: ['"Nunito Sans"', 'sans-serif'] },
+    colors: { navy: '#0a1f44', royal: '#1d4ed8', sky: '#38bdf8', ice: '#eff6ff', mist: '#dbeafe', navy2: '#12295a' }
+  } }
+}
+</script>
+<style>
+  .hero-bg { background: radial-gradient(circle at 85% 10%, rgba(56,189,248,.35), transparent 45%), radial-gradient(circle at 5% 90%, rgba(29,78,216,.6), transparent 50%), #0a1f44; }
+  @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+  .rise { animation: rise .8s ease-out both; }
+  .rise-2 { animation-delay: .15s; } .rise-3 { animation-delay: .3s; }
+  @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  .floaty { animation: floaty 5s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce) { .rise, .floaty { animation: none; } }
+  :focus-visible { outline: 3px solid #38bdf8; outline-offset: 2px; }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  h1,h2,h3,h4{font-family:"Bricolage Grotesque",sans-serif;letter-spacing:-.01em}
+  .bg-navy .text-royal,.hero-bg .text-royal,.bg-royal .text-royal{color:#7dd3fc}
+  main .shadow-sm,main .shadow-xl{transition:transform .2s,box-shadow .2s}
+  main .shadow-sm:hover{transform:translateY(-3px);box-shadow:0 14px 28px -10px rgba(29,78,216,.3)}
+</style>
+</head>
+<body class="bg-ice text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-sky text-navy px-4 py-2 rounded shadow font-semibold z-50">Skip to main content</a>
+<header class="bg-navy text-white sticky top-0 z-50 shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+    <a href="index.html" class="flex items-center gap-3">
+      <span class="w-10 h-10 rounded-xl bg-sky text-navy grid place-items-center font-display font-extrabold">L</span>
+      <span class="font-display text-2xl font-extrabold tracking-wide">LCCWA</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-7 text-sm font-semibold">
+      <a href="index.html" class="hover:text-sky transition-colors py-2">Home</a>
+      <div class="relative group py-2">
+        <button class="flex items-center gap-1 hover:text-sky transition-colors" aria-haspopup="true">About Us
+          <svg class="w-4 h-4 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="absolute left-0 pt-2 w-48 hidden group-hover:block group-focus-within:block">
+          <div class="bg-white rounded-xl shadow-xl py-2 text-navy">
+            <a href="who-we-are.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Who We Are</a>
+            <a href="our-leadership.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Our Leadership</a>
+            <a href="newsletters.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Newsletters</a>
+          </div>
+        </div>
+      </div>
+      <div class="relative group py-2">
+        <button class="flex items-center gap-1 hover:text-sky transition-colors" aria-haspopup="true">Our Programs
+          <svg class="w-4 h-4 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="absolute left-0 pt-2 w-56 hidden group-hover:block group-focus-within:block">
+          <div class="bg-white rounded-xl shadow-xl py-2 text-navy">
+            <a href="academic-program.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Academic Program</a>
+            <a href="shakti-program.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Shakti Program</a>
+            <a href="soft-skills-program.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Soft Skills Program</a>
+            <a href="ankur-program.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Ankur Program</a>
+          </div>
+        </div>
+      </div>
+      <a href="contact.html" class="hover:text-sky transition-colors py-2">Contact Us</a>
+      <a href="contact.html" class="bg-sky text-navy font-bold px-5 py-2.5 rounded-full hover:bg-white transition-colors">Support a Child</a>
+    </nav>
+
+    <button id="menu-btn" type="button" class="md:hidden text-sky" aria-label="Toggle navigation menu">
+      <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-navy border-t border-white/10 px-4 pt-2 pb-5 space-y-1">
+    <a href="index.html" class="block py-2 font-semibold">Home</a>
+    <button id="mobile-about-btn" class="w-full flex justify-between items-center py-2 font-semibold">About Us
+      <svg id="mobile-about-arrow" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </button>
+    <div id="mobile-about-submenu" class="hidden pl-4 border-l-2 border-sky space-y-1">
+      <a href="who-we-are.html" class="block py-1.5 text-sm text-blue-100">Who We Are</a>
+      <a href="our-leadership.html" class="block py-1.5 text-sm text-blue-100">Our Leadership</a>
+      <a href="newsletters.html" class="block py-1.5 text-sm text-blue-100">Newsletters</a>
+    </div>
+    <button id="mobile-programs-btn" class="w-full flex justify-between items-center py-2 font-semibold">Our Programs
+      <svg id="mobile-programs-arrow" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </button>
+    <div id="mobile-programs-submenu" class="hidden pl-4 border-l-2 border-sky space-y-1">
+      <a href="academic-program.html" class="block py-1.5 text-sm text-blue-100">Academic Program</a>
+      <a href="shakti-program.html" class="block py-1.5 text-sm text-blue-100">Shakti Program</a>
+      <a href="soft-skills-program.html" class="block py-1.5 text-sm text-blue-100">Soft Skills Program</a>
+      <a href="ankur-program.html" class="block py-1.5 text-sm text-blue-100">Ankur Program</a>
+    </div>
+    <a href="contact.html" class="block py-2 font-semibold">Contact Us</a>
+    <a href="contact.html" class="block text-center bg-sky text-navy font-bold px-5 py-3 rounded-full mt-2">Support a Child</a>
+  </div>
+</header>
+<main id="main-content" class="flex-grow">
+        <div class="bg-mist py-16 border-b border-blue-100">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-3xl md:text-4xl font-bold text-navy">Join Hands with LCCWA</h1>
+                <p class="text-gray-600 mt-2">Whether through resources, teaching, or financial aid—your collaboration directly drives local equity.</p>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 py-16 max-w-4xl shadow-sm bg-white my-10 rounded-2xl border border-blue-100">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <div>
+                    <h2 class="text-2xl font-bold mb-4 text-navy">Make an Impact</h2>
+                    <p class="text-gray-600 text-sm mb-6 leading-relaxed">LCCWA relies heavily on the collective strength of independent donors, volunteer educators, and localized academic corporate partnerships to operate our completely free software laboratories, community kitchens, and classrooms. Fill out this interactive onboarding panel, and our management team will reach out directly.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3 text-gray-700">
+                            <i class="fa-solid fa-location-dot text-royal w-5"></i>
+                            <span class="text-sm font-medium">Powai, Mumbai, India</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-gray-700">
+                            <i class="fa-solid fa-envelope text-royal w-5"></i>
+                            <span class="text-sm font-medium">info@lccwa.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form onsubmit="event.preventDefault(); alert('Thank you for connecting with LCCWA! Our team will get back to you shortly.');" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-1">Full Name</label>
+                        <input type="text" required class="w-full border border-blue-100 rounded-lg px-4 py-2.5 focus:outline-none focus:border-sky text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-1">Email Address</label>
+                        <input type="email" required class="w-full border border-blue-100 rounded-lg px-4 py-2.5 focus:outline-none focus:border-sky text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-1">Participation Track</label>
+                        <select class="w-full border border-blue-100 rounded-lg px-4 py-2.5 focus:outline-none focus:border-sky text-sm bg-white">
+                            <option>Make a Financial Donation</option>
+                            <option>Volunteer as an Educator</option>
+                            <option>Corporate CSR Partnership</option>
+                            <option>Other Operational Support</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full bg-sky hover:bg-blue-300 text-white font-bold py-3 rounded-lg shadow transition tracking-wide text-sm">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </main>
+<footer class="bg-navy text-blue-200 text-sm py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <p>&copy; 2026 Life Care &amp; Child Welfare Association (LCCWA). All rights reserved.</p>
+    <div class="flex gap-6">
+      <a href="index.html" class="hover:text-sky transition-colors">Home</a>
+      <a href="who-we-are.html" class="hover:text-sky transition-colors">About Us</a>
+      <a href="academic-program.html" class="hover:text-sky transition-colors">Our Programs</a>
+      <a href="contact.html" class="hover:text-sky transition-colors">Contact Us</a>
+    </div>
+  </div>
+</footer>
+<script>
+  const $ = id => document.getElementById(id);
+  $('menu-btn').addEventListener('click', () => $('mobile-menu').classList.toggle('hidden'));
+  [['about'], ['programs']].forEach(([k]) => {
+    $(`mobile-${k}-btn`).addEventListener('click', () => {
+      $(`mobile-${k}-submenu`).classList.toggle('hidden');
+      $(`mobile-${k}-arrow`).classList.toggle('rotate-180');
+    });
+  });
+</script>
+
+</body>
+</html>

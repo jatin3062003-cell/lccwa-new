@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newsletters & Reports | LCCWA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    fontFamily: { display: ['"Bricolage Grotesque"', 'sans-serif'], sans: ['"Nunito Sans"', 'sans-serif'] },
+    colors: { navy: '#0a1f44', royal: '#1d4ed8', sky: '#38bdf8', ice: '#eff6ff', mist: '#dbeafe', navy2: '#12295a' }
+  } }
+}
+</script>
+<style>
+  .hero-bg { background: radial-gradient(circle at 85% 10%, rgba(56,189,248,.35), transparent 45%), radial-gradient(circle at 5% 90%, rgba(29,78,216,.6), transparent 50%), #0a1f44; }
+  @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+  .rise { animation: rise .8s ease-out both; }
+  .rise-2 { animation-delay: .15s; } .rise-3 { animation-delay: .3s; }
+  @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  .floaty { animation: floaty 5s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce) { .rise, .floaty { animation: none; } }
+  :focus-visible { outline: 3px solid #38bdf8; outline-offset: 2px; }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  h1,h2,h3,h4{font-family:"Bricolage Grotesque",sans-serif;letter-spacing:-.01em}
+  .bg-navy .text-royal,.hero-bg .text-royal,.bg-royal .text-royal{color:#7dd3fc}
+  main .shadow-sm,main .shadow-xl{transition:transform .2s,box-shadow .2s}
+  main .shadow-sm:hover{transform:translateY(-3px);box-shadow:0 14px 28px -10px rgba(29,78,216,.3)}
+</style>
+</head>
+<body class="bg-ice text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-sky text-navy px-4 py-2 rounded shadow font-semibold z-50">Skip to main content</a>
+<header class="bg-navy text-white sticky top-0 z-50 shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+    <a href="index.html" class="flex items-center gap-3">
+      <span class="w-10 h-10 rounded-xl bg-sky text-navy grid place-items-center font-display font-extrabold">L</span>
+      <span class="font-display text-2xl font-extrabold tracking-wide">LCCWA</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-7 text-sm font-semibold">
+      <a href="index.html" class="hover:text-sky transition-colors py-2">Home</a>
+      <div class="relative group py-2">
+        <button class="flex items-center gap-1 text-sky border-b-2 border-sky transition-colors" aria-haspopup="true">About Us
+          <svg class="w-4 h-4 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="absolute left-0 pt-2 w-48 hidden group-hover:block group-focus-within:block">
+          <div class="bg-white rounded-xl shadow-xl py-2 text-navy">
+            <a href="who-we-are.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Who We Are</a>
+            <a href="our-leadership.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Our Leadership</a>
+            <a href="newsletters.html" class="block px-4 py-2 text-sm bg-mist text-royal font-bold hover:text-royal">Newsletters</a>
+          </div>
+        </div>
+      </div>
+      <div class="relative group py-2">
+        <button class="flex items-center gap-1 hover:text-sky transition-colors" aria-haspopup="true">Our Programs
+          <svg class="w-4 h-4 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="absolute left-0 pt-2 w-56 hidden group-hover:block group-focus-within:block">
+          <div class="bg-white rounded-xl shadow-xl py-2 text-navy">
+            <a href="academic-program.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Academic Program</a>
+            <a href="shakti-program.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Shakti Program</a>
+            <a href="soft-skills-program.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Soft Skills Program</a>
+            <a href="ankur-program.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Ankur Program</a>
+          </div>
+        </div>
+      </div>
+      <a href="contact.html" class="hover:text-sky transition-colors py-2">Contact Us</a>
+      <a href="contact.html" class="bg-sky text-navy font-bold px-5 py-2.5 rounded-full hover:bg-white transition-colors">Support a Child</a>
+    </nav>
+
+    <button id="menu-btn" type="button" class="md:hidden text-sky" aria-label="Toggle navigation menu">
+      <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-navy border-t border-white/10 px-4 pt-2 pb-5 space-y-1">
+    <a href="index.html" class="block py-2 font-semibold">Home</a>
+    <button id="mobile-about-btn" class="w-full flex justify-between items-center py-2 font-semibold text-sky">About Us
+      <svg id="mobile-about-arrow" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </button>
+    <div id="mobile-about-submenu" class="hidden pl-4 border-l-2 border-sky space-y-1">
+      <a href="who-we-are.html" class="block py-1.5 text-sm text-blue-100">Who We Are</a>
+      <a href="our-leadership.html" class="block py-1.5 text-sm text-blue-100">Our Leadership</a>
+      <a href="newsletters.html" class="block py-1.5 text-sm text-blue-100">Newsletters</a>
+    </div>
+    <button id="mobile-programs-btn" class="w-full flex justify-between items-center py-2 font-semibold">Our Programs
+      <svg id="mobile-programs-arrow" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </button>
+    <div id="mobile-programs-submenu" class="hidden pl-4 border-l-2 border-sky space-y-1">
+      <a href="academic-program.html" class="block py-1.5 text-sm text-blue-100">Academic Program</a>
+      <a href="shakti-program.html" class="block py-1.5 text-sm text-blue-100">Shakti Program</a>
+      <a href="soft-skills-program.html" class="block py-1.5 text-sm text-blue-100">Soft Skills Program</a>
+      <a href="ankur-program.html" class="block py-1.5 text-sm text-blue-100">Ankur Program</a>
+    </div>
+    <a href="contact.html" class="block py-2 font-semibold">Contact Us</a>
+    <a href="contact.html" class="block text-center bg-sky text-navy font-bold px-5 py-3 rounded-full mt-2">Support a Child</a>
+  </div>
+</header>
+<main id="main-content" class="flex-grow">
+        
+        <div class="hero-bg text-white py-16 px-6 text-center border-b border-blue-900">
+            <div class="container mx-auto max-w-3xl">
+                <span class="bg-sky text-navy text-xs uppercase font-extrabold px-3 py-1 rounded-full tracking-widest shadow-sm">Media & Transparency</span>
+                <h1 class="text-3xl md:text-5xl font-black mt-3 mb-3 tracking-tight">Newsletters & Reports</h1>
+                <p class="text-gray-400 text-sm md:text-base max-w-xl mx-auto leading-relaxed">Stay updated with our latest operational developments, academic breakthroughs, field metrics, and transparent financial reporting.</p>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 py-16 max-w-5xl">
+            <div class="border-b border-blue-100 pb-4 mb-8 flex items-center justify-between">
+                <div class="space-y-1">
+                    <h2 class="text-2xl font-black text-navy tracking-tight">Our Newsletters</h2>
+                    <p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Periodic community transformations and operational logs</p>
+                </div>
+                <div class="text-royal text-xl"><i class="fa-solid fa-newspaper"></i></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div class="bg-white rounded-3xl border border-blue-100 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col justify-between overflow-hidden">
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-royal bg-mist px-2.5 py-1 rounded border border-mist uppercase tracking-wide">Latest Edition</span>
+                            <span class="text-xs text-gray-400 font-medium"><i class="fa-regular fa-file-pdf mr-1"></i> 7 Pages</span>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-extrabold text-navy leading-tight">Newsletter January 2026</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Explore our complete New Year progress roadmap, computational engineering milestones with Spoken Tutorials, pre-primary nutrition growth counts, and winter camp breakdowns.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-ice px-6 py-4 border-t border-blue-100 flex items-center justify-between">
+                        <span class="text-xs text-gray-500 font-semibold">Published: Jan 2026</span>
+                        <a href="#" class="text-royal hover:text-royal font-bold text-sm flex items-center space-x-1.5 transition-colors">
+                            <span>Read Document</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl border border-blue-100 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col justify-between overflow-hidden">
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-gray-600 bg-mist px-2.5 py-1 rounded border border-blue-100 uppercase tracking-wide">Previous Edition</span>
+                            <span class="text-xs text-gray-400 font-medium"><i class="fa-regular fa-file-pdf mr-1"></i> 5 Pages</span>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-extrabold text-navy leading-tight">Newsletter September 2025</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Review our comprehensive analysis covering monsoon academic alignment protocols, health checkups, and the expansion metrics of our Ankur Pre-Primary branch.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-ice px-6 py-4 border-t border-blue-100 flex items-center justify-between">
+                        <span class="text-xs text-gray-500 font-semibold">Published: Sep 2025</span>
+                        <a href="#" class="text-royal hover:text-royal font-bold text-sm flex items-center space-x-1.5 transition-colors">
+                            <span>Read Document</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-mist/60 border-t border-b border-blue-100 py-16">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="border-b border-blue-100 pb-4 mb-8 flex items-center justify-between">
+                    <div class="space-y-1">
+                        <h2 class="text-2xl font-black text-navy tracking-tight">Annual Reports</h2>
+                        <p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Transparent legal, fiscal, and institutional parameters</p>
+                    </div>
+                    <div class="text-blue-500 text-xl"><i class="fa-solid fa-chart-pie"></i></div>
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-3xl border border-blue-100 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-blue-50 text-blue-500 p-4 rounded-2xl border border-blue-100 hidden sm:block">
+                            <i class="fa-solid fa-folder-open text-2xl"></i>
+                        </div>
+                        <div class="space-y-1.5">
+                            <div class="flex items-center space-x-3">
+                                <h3 class="font-extrabold text-navy text-lg">Annual Statement & Impact Report</h3>
+                                <span class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded border border-blue-100 uppercase tracking-wide">Audited</span>
+                            </div>
+                            <p class="text-gray-600 text-sm max-w-2xl leading-relaxed">
+                                Contains audited financial accounts, balancing ledgers compiled by our founding panel, student metric enrollment progressions, and structural overhead breakdowns for corporate compliance.
+                            </p>
+                            <div class="text-xs text-gray-400 font-medium">
+                                <span class="mr-4"><i class="fa-regular fa-file-pdf mr-1"></i> 4 Pages</span>
+                                <span><i class="fa-regular fa-calendar-check mr-1"></i> Fiscal Cycle Framework</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-auto flex-shrink-0">
+                        <a href="#" class="w-full md:w-auto bg-navy hover:bg-navy2 text-white px-6 py-3 rounded-2xl font-bold text-sm block text-center shadow-md transition-all">
+                            <i class="fa-solid fa-download mr-2"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+  <!-- Call to action -->
+  <section class="px-4 sm:px-6 lg:px-8 pb-20">
+    <div class="max-w-7xl mx-auto hero-bg text-white rounded-3xl px-8 py-14 text-center space-y-5 shadow-xl">
+      <h2 class="font-display text-3xl sm:text-4xl font-extrabold">Help us write the next success story</h2>
+      <p class="text-blue-100 max-w-xl mx-auto">Volunteer your time, sponsor a child's learning, or partner with us. Every bit of support helps a student go further.</p>
+      <div class="flex flex-wrap gap-3 justify-center pt-2">
+        <a href="contact.html" class="bg-sky text-navy font-bold px-7 py-3.5 rounded-full hover:bg-white transition">Get involved</a>
+        <a href="newsletters.html" class="border-2 border-white/40 font-bold px-7 py-3.5 rounded-full hover:bg-white/10 transition">Read our newsletters</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="bg-navy text-blue-200 text-sm py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <p>&copy; 2026 Life Care &amp; Child Welfare Association (LCCWA). All rights reserved.</p>
+    <div class="flex gap-6">
+      <a href="index.html" class="hover:text-sky transition-colors">Home</a>
+      <a href="who-we-are.html" class="hover:text-sky transition-colors">About Us</a>
+      <a href="academic-program.html" class="hover:text-sky transition-colors">Our Programs</a>
+      <a href="contact.html" class="hover:text-sky transition-colors">Contact Us</a>
+    </div>
+  </div>
+</footer>
+<script>
+  const $ = id => document.getElementById(id);
+  $('menu-btn').addEventListener('click', () => $('mobile-menu').classList.toggle('hidden'));
+  [['about'], ['programs']].forEach(([k]) => {
+    $(`mobile-${k}-btn`).addEventListener('click', () => {
+      $(`mobile-${k}-submenu`).classList.toggle('hidden');
+      $(`mobile-${k}-arrow`).classList.toggle('rotate-180');
+    });
+  });
+</script>
+
+</body>
+</html>
