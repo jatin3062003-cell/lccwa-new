@@ -1,247 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Leadership & Team | LCCWA</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: { extend: {
-    fontFamily: { display: ['"Bricolage Grotesque"', 'sans-serif'], sans: ['"Nunito Sans"', 'sans-serif'] },
-    colors: { navy: '#0a1f44', royal: '#1d4ed8', sky: '#38bdf8', ice: '#eff6ff', mist: '#dbeafe', navy2: '#12295a' }
-  } }
-}
-</script>
-<style>
-  .hero-bg { background: radial-gradient(circle at 85% 10%, rgba(56,189,248,.35), transparent 45%), radial-gradient(circle at 5% 90%, rgba(29,78,216,.6), transparent 50%), #0a1f44; }
-  @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
-  .rise { animation: rise .8s ease-out both; }
-  .rise-2 { animation-delay: .15s; } .rise-3 { animation-delay: .3s; }
-  @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-  .floaty { animation: floaty 5s ease-in-out infinite; }
-  @media (prefers-reduced-motion: reduce) { .rise, .floaty { animation: none; } }
-  :focus-visible { outline: 3px solid #38bdf8; outline-offset: 2px; }
-</style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-  h1,h2,h3,h4{font-family:"Bricolage Grotesque",sans-serif;letter-spacing:-.01em}
-  .bg-navy .text-royal,.hero-bg .text-royal,.bg-royal .text-royal{color:#7dd3fc}
-  main .shadow-sm,main .shadow-xl{transition:transform .2s,box-shadow .2s}
-  main .shadow-sm:hover{transform:translateY(-3px);box-shadow:0 14px 28px -10px rgba(29,78,216,.3)}
-</style>
-</head>
-<body class="bg-ice text-slate-800 font-sans antialiased flex flex-col min-h-screen">
-<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-sky text-navy px-4 py-2 rounded shadow font-semibold z-50">Skip to main content</a>
-<header class="bg-navy text-white sticky top-0 z-50 shadow-lg">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
-    <a href="index.html" class="flex items-center gap-3">
-      <span class="w-10 h-10 rounded-xl bg-sky text-navy grid place-items-center font-display font-extrabold">L</span>
-      <span class="font-display text-2xl font-extrabold tracking-wide">LCCWA</span>
-    </a>
-
-    <nav class="hidden md:flex items-center gap-7 text-sm font-semibold">
-      <a href="index.html" class="hover:text-sky transition-colors py-2">Home</a>
-      <div class="relative group py-2">
-        <button class="flex items-center gap-1 text-sky border-b-2 border-sky transition-colors" aria-haspopup="true">About Us
-          <svg class="w-4 h-4 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="absolute left-0 pt-2 w-48 hidden group-hover:block group-focus-within:block">
-          <div class="bg-white rounded-xl shadow-xl py-2 text-navy">
-            <a href="who-we-are.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Who We Are</a>
-            <a href="our-leadership.html" class="block px-4 py-2 text-sm bg-mist text-royal font-bold hover:text-royal">Our Leadership</a>
-            <a href="newsletters.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Newsletters</a>
-          </div>
+  <head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Leadership | LCCWA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .leadership-page{background:#fffdf7;color:#182d49;font-family:"Libre Baskerville",serif}.leadership-hero{padding:76px 8%;text-align:center;background:#ffef9e}.leadership-hero p{margin:0 0 10px;font:700 .75rem "DM Sans",sans-serif;letter-spacing:.14em;text-transform:uppercase}.leadership-hero h1{max-width:750px;margin:0 auto;font-size:clamp(2.6rem,5vw,5rem);line-height:1.1}.leadership-content{max-width:1180px;margin:auto;padding:76px 28px 95px}.leadership-intro{max-width:760px;margin:0 auto 48px;text-align:center}.leadership-intro h2{margin:0 0 18px;font-size:clamp(2rem,4vw,3.3rem)}.leadership-intro p{line-height:1.8}.team-photo{width:100%;max-height:390px;object-fit:cover;margin:0 0 65px}.leadership-section-title{margin:0 0 26px;font-size:clamp(2rem,4vw,3.1rem);text-align:center}.people-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.leader-card{overflow:hidden;background:#fff;border:1px solid #d8e1df;box-shadow:0 8px 20px rgba(16,44,74,.08)}.leader-card:nth-child(3n+2){background:#e5f4f0}.leader-card:nth-child(3n){background:#fff2b7}.leader-card img{display:block;width:100%;height:190px;object-fit:cover;object-position:center}.leader-card-content{padding:22px;min-height:135px}.leader-card h3{margin:0 0 8px;font:700 1.13rem "Libre Baskerville",serif;line-height:1.35}.leader-card p{margin:0;color:#34516d;font:700 .74rem "DM Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase}.advisor-block{margin-top:72px}.leader-card.advisor{background:#f0e9ff}@media(max-width:760px){.leadership-hero{padding:52px 7%}.leadership-content{padding:60px 20px}.team-photo{margin-bottom:45px}.people-cards{grid-template-columns:1fr}.leader-card img{height:225px}}
+    </style>
+  </head>
+  <body>
+    <header id="site-header"></header>
+    <main class="leadership-page">
+      <section class="leadership-hero"><p>About LCCWA</p><h1>Meet our leadership</h1></section>
+      <section class="leadership-content">
+        <div class="leadership-intro"><h2>People who guide our work</h2><p>Our trustees, advisors, teachers, and volunteers help LCCWA create long-term, meaningful opportunity for children and women in our community.</p></div>
+        <img class="team-photo" src="https://static.wixstatic.com/media/d8734e_d30ee967bd784d28b3950e544ff37207~mv2.jpg/v1/fill/w_1905,h_776,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/GroupPhoto.JPG" alt="LCCWA team of teachers and volunteers">
+        <h2 class="leadership-section-title">Our Trustees</h2>
+        <div class="people-cards">
+          <article class="leader-card"><img src="https://static.wixstatic.com/media/d8734e_ab9a21dff6aa4400809590f609becf0f~mv2.png/v1/fill/w_360,h_360,al_c,lg_1,q_85,enc_avif,quality_auto/3.png" alt="Prof. S.D. Agashe"><div class="leader-card-content"><h3>Prof. S.D. Agashe</h3><p>Founding Member</p></div></article>
+          <article class="leader-card"><img src="https://static.wixstatic.com/media/d8734e_c48d32b270564283856cf049ebee52b6~mv2.jpg/v1/fill/w_360,h_360,al_c,lg_1,q_80,enc_avif,quality_auto/4_edited.jpg" alt="LCCWA trustee"><div class="leader-card-content"><h3>Upal Chatterjee</h3><p>Trustee</p></div></article>
+          <article class="leader-card"><img src="https://static.wixstatic.com/media/d8734e_d30ee967bd784d28b3950e544ff37207~mv2.jpg/v1/fill/w_600,h_400,al_c,q_85,enc_avif,quality_auto/GroupPhoto.JPG" alt="LCCWA team"><div class="leader-card-content"><h3>Supratik Chakraborty</h3><p>Trustee</p></div></article>
+          <article class="leader-card"><img src="https://static.wixstatic.com/media/d8734e_ab9a21dff6aa4400809590f609becf0f~mv2.png/v1/fill/w_360,h_360,al_c,lg_1,q_85,enc_avif,quality_auto/3.png" alt="LCCWA trustee"><div class="leader-card-content"><h3>Sarita Rustagi</h3><p>Trustee</p></div></article>
+          <article class="leader-card"><img src="https://static.wixstatic.com/media/d8734e_c48d32b270564283856cf049ebee52b6~mv2.jpg/v1/fill/w_360,h_360,al_c,lg_1,q_80,enc_avif,quality_auto/4_edited.jpg" alt="LCCWA trustee"><div class="leader-card-content"><h3>Anita Menon</h3><p>Trustee</p></div></article>
+          <article class="leader-card"><img src="https://static.wixstatic.com/media/d8734e_d30ee967bd784d28b3950e544ff37207~mv2.jpg/v1/fill/w_600,h_400,al_c,q_85,enc_avif,quality_auto/GroupPhoto.JPG" alt="LCCWA team"><div class="leader-card-content"><h3>Madhavi Rao</h3><p>Trustee</p></div></article>
+          <article class="leader-card"><img src="https://static.wixstatic.com/media/d8734e_ab9a21dff6aa4400809590f609becf0f~mv2.png/v1/fill/w_360,h_360,al_c,lg_1,q_85,enc_avif,quality_auto/3.png" alt="LCCWA trustee"><div class="leader-card-content"><h3>Cavas Dumasia</h3><p>Trustee</p></div></article>
         </div>
-      </div>
-      <div class="relative group py-2">
-        <button class="flex items-center gap-1 hover:text-sky transition-colors" aria-haspopup="true">Our Programs
-          <svg class="w-4 h-4 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="absolute left-0 pt-2 w-56 hidden group-hover:block group-focus-within:block">
-          <div class="bg-white rounded-xl shadow-xl py-2 text-navy">
-            <a href="academic-program.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Academic Program</a>
-            <a href="shakti-program.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Shakti Program</a>
-            <a href="soft-skills-program.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Soft Skills Program</a>
-            <a href="ankur-program.html" class="block px-4 py-2 text-sm hover:bg-mist hover:text-royal">Ankur Program</a>
-          </div>
-        </div>
-      </div>
-      <a href="contact.html" class="hover:text-sky transition-colors py-2">Contact Us</a>
-      <a href="contact.html" class="bg-sky text-navy font-bold px-5 py-2.5 rounded-full hover:bg-white transition-colors">Support a Child</a>
-    </nav>
-
-    <button id="menu-btn" type="button" class="md:hidden text-sky" aria-label="Toggle navigation menu">
-      <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-    </button>
-  </div>
-
-  <div id="mobile-menu" class="hidden md:hidden bg-navy border-t border-white/10 px-4 pt-2 pb-5 space-y-1">
-    <a href="index.html" class="block py-2 font-semibold">Home</a>
-    <button id="mobile-about-btn" class="w-full flex justify-between items-center py-2 font-semibold text-sky">About Us
-      <svg id="mobile-about-arrow" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-    </button>
-    <div id="mobile-about-submenu" class="hidden pl-4 border-l-2 border-sky space-y-1">
-      <a href="who-we-are.html" class="block py-1.5 text-sm text-blue-100">Who We Are</a>
-      <a href="our-leadership.html" class="block py-1.5 text-sm text-blue-100">Our Leadership</a>
-      <a href="newsletters.html" class="block py-1.5 text-sm text-blue-100">Newsletters</a>
-    </div>
-    <button id="mobile-programs-btn" class="w-full flex justify-between items-center py-2 font-semibold">Our Programs
-      <svg id="mobile-programs-arrow" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-    </button>
-    <div id="mobile-programs-submenu" class="hidden pl-4 border-l-2 border-sky space-y-1">
-      <a href="academic-program.html" class="block py-1.5 text-sm text-blue-100">Academic Program</a>
-      <a href="shakti-program.html" class="block py-1.5 text-sm text-blue-100">Shakti Program</a>
-      <a href="soft-skills-program.html" class="block py-1.5 text-sm text-blue-100">Soft Skills Program</a>
-      <a href="ankur-program.html" class="block py-1.5 text-sm text-blue-100">Ankur Program</a>
-    </div>
-    <a href="contact.html" class="block py-2 font-semibold">Contact Us</a>
-    <a href="contact.html" class="block text-center bg-sky text-navy font-bold px-5 py-3 rounded-full mt-2">Support a Child</a>
-  </div>
-</header>
-<main id="main-content" class="flex-grow">
-        
-        <div class="hero-bg text-white py-16 px-6 text-center border-b border-blue-900">
-            <div class="container mx-auto max-w-3xl">
-                <span class="bg-sky text-navy text-xs uppercase font-extrabold px-3 py-1 rounded-full tracking-widest shadow-sm">Governance & Strategy Team</span>
-                <h1 class="text-3xl md:text-5xl font-black mt-3 mb-3 tracking-tight">Meet Our Team</h1>
-                <p class="text-gray-400 text-sm md:text-base max-w-xl mx-auto leading-relaxed">The dedicated panel of trustees, educators, advisors, and volunteers driving our community framework forward.</p>
-            </div>
-        </div>
-
-        <div class="container mx-auto px-6 py-16 max-w-5xl">
-            <div class="text-center max-w-2xl mx-auto mb-10">
-                <h2 class="text-2xl font-black text-navy tracking-tight">Our Trustees</h2>
-                <div class="w-12 h-1 bg-sky mx-auto mt-2 rounded-full"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start bg-white p-6 md:p-8 rounded-3xl shadow-md border border-blue-100">
-                <div class="md:col-span-1 bg-ice border border-blue-100 rounded-2xl p-6 text-center space-y-3">
-                    <div class="w-20 h-20 bg-mist text-royal rounded-full flex items-center justify-center font-black text-2xl mx-auto shadow-inner">
-                        UC
-                    </div>
-                    <div>
-                        <h4 class="font-extrabold text-navy text-base">Mr. Upal Chatterji</h4>
-                        <span class="text-xs font-bold text-royal tracking-wider uppercase block mt-0.5">Secretary</span>
-                    </div>
-                    <div class="text-xs font-semibold text-gray-500 bg-white border border-blue-100 rounded py-1 px-2.5 inline-block">
-                        <i class="fa-solid fa-graduation-cap mr-1"></i> IIT Kharagpur Alumni
-                    </div>
-                </div>
-
-                <div class="md:col-span-2 space-y-4 pt-2">
-                    <h3 class="text-lg font-bold text-navy border-b border-blue-100 pb-2">Operational Management & Stewardship</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        A retired Corporate Executive, IIT Kharagpur Alumni, and deeply concerned citizen, Mr. Chatterji channels years of premium corporate leadership into structured civic action. 
-                    </p>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        He remains explicitly hands-on inside the organization, directing core student science coaching modules, operational field management, programmatic fundraising, and corporate marketing strategies. He assumes absolute executive oversight of the daily functioning of the LCCWA central office operations.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-mist/60 border-t border-b border-blue-100 py-16">
-            <div class="container mx-auto px-6 max-w-5xl">
-                <div class="text-center max-w-2xl mx-auto mb-10">
-                    <h2 class="text-2xl font-black text-navy tracking-tight">Our Advisors</h2>
-                    <p class="text-xs text-gray-500 uppercase font-bold tracking-widest mt-1">Strategic finance and administrative consulting</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start bg-white p-6 md:p-8 rounded-3xl shadow-md border border-blue-100">
-                    <div class="md:col-span-1 bg-ice border border-blue-100 rounded-2xl p-6 text-center space-y-3">
-                        <div class="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-black text-2xl mx-auto shadow-inner">
-                            NM
-                        </div>
-                        <div>
-                            <h4 class="font-extrabold text-navy text-base">Nirmesh Mehta</h4>
-                            <span class="text-xs font-bold text-blue-600 tracking-wider uppercase block mt-0.5">Founding Member</span>
-                        </div>
-                        <div class="text-xs font-semibold text-gray-500 bg-white border border-blue-100 rounded py-1 px-2.5 inline-block">
-                            <i class="fa-solid fa-graduation-cap mr-1"></i> IIT Bombay Graduate
-                        </div>
-                    </div>
-
-                    <div class="md:col-span-2 space-y-4 pt-2">
-                        <h3 class="text-lg font-bold text-navy border-b border-blue-100 pb-2">Fiscal Governance & Auditing Control</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            A graduate from **IIT Bombay** and active IT professional operating within the private enterprise sector, Nirmesh diligently contributes corporate time to secure the logistical longevity of LCCWA. 
-                        </p>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            He completely manages our complex institutional finances, orchestrating annual structural budgets and projecting future expenditure parameters. This financial mapping ensures all transactions are logged systematically, paving the way for seamless, fully compliant auditing. Additionally, he collaborates extensively on institutional fund-raising streams.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container mx-auto px-6 py-16 max-w-4xl">
-            <div class="text-center max-w-2xl mx-auto mb-10">
-                <span class="text-[10px] bg-mist text-slate-700 px-3 py-1 rounded-full uppercase tracking-widest font-extrabold">In Loving Memory</span>
-                <h2 class="text-2xl font-black text-navy tracking-tight mt-1">People We Miss</h2>
-                <div class="w-12 h-1 bg-mist mx-auto mt-2 rounded-full"></div>
-            </div>
-
-            <div class="bg-gradient-to-br from-ice to-mist/40 p-6 md:p-8 rounded-3xl border border-blue-100 shadow-inner space-y-4">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-blue-100 pb-3 gap-2">
-                    <div>
-                        <h3 class="font-extrabold text-navy text-lg">Late Prof. Amitabh Gupta</h3>
-                        <p class="text-xs text-slate-500 font-medium">Retired Professor, IIT Bombay & Founding Member</p>
-                    </div>
-                    <span class="text-xs bg-navy text-royal font-bold px-3 py-1 rounded-md self-start sm:self-center uppercase tracking-wider">Foundation Pillar</span>
-                </div>
-
-                <p class="text-slate-700 text-sm leading-relaxed">
-                    Prof. Gupta can be directly credited for molding LCCWA into the structured, impactful institution that it represents today. Powered by a immense passion for childhood learning, he was deeply moved upon observing that brilliant children from low-income backgrounds continuously dropped out of schools—often pushed into child labor or early marriage ecosystems.
-                </p>
-
-                <p class="text-slate-700 text-sm leading-relaxed">
-                    This urgent realization inspired him and his wife to gather personal funds and rent a small room directly inside a marginalized pocket opposite the IIT Bombay campus. That single room planted the exact seed that blossomed into the expansive layout of LCCWA in subsequent years. 
-                </p>
-
-                <p class="text-slate-700 text-sm leading-relaxed font-medium bg-white p-4 rounded-2xl border border-blue-100 italic">
-                    "His precise legacy ensures that all teachers across LCCWA adopt a highly systematic, analytical, and scientific method while teaching, helping generations of students cultivate an authentic aptitude for science."
-                </p>
-            </div>
-        </div>
-
-    
-  <!-- Call to action -->
-  <section class="px-4 sm:px-6 lg:px-8 pb-20">
-    <div class="max-w-7xl mx-auto hero-bg text-white rounded-3xl px-8 py-14 text-center space-y-5 shadow-xl">
-      <h2 class="font-display text-3xl sm:text-4xl font-extrabold">Help us write the next success story</h2>
-      <p class="text-blue-100 max-w-xl mx-auto">Volunteer your time, sponsor a child's learning, or partner with us. Every bit of support helps a student go further.</p>
-      <div class="flex flex-wrap gap-3 justify-center pt-2">
-        <a href="contact.html" class="bg-sky text-navy font-bold px-7 py-3.5 rounded-full hover:bg-white transition">Get involved</a>
-        <a href="newsletters.html" class="border-2 border-white/40 font-bold px-7 py-3.5 rounded-full hover:bg-white/10 transition">Read our newsletters</a>
-      </div>
-    </div>
-  </section>
-</main>
-<footer class="bg-navy text-blue-200 text-sm py-8">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-    <p>&copy; 2026 Life Care &amp; Child Welfare Association (LCCWA). All rights reserved.</p>
-    <div class="flex gap-6">
-      <a href="index.html" class="hover:text-sky transition-colors">Home</a>
-      <a href="who-we-are.html" class="hover:text-sky transition-colors">About Us</a>
-      <a href="academic-program.html" class="hover:text-sky transition-colors">Our Programs</a>
-      <a href="contact.html" class="hover:text-sky transition-colors">Contact Us</a>
-    </div>
-  </div>
-</footer>
-<script>
-  const $ = id => document.getElementById(id);
-  $('menu-btn').addEventListener('click', () => $('mobile-menu').classList.toggle('hidden'));
-  [['about'], ['programs']].forEach(([k]) => {
-    $(`mobile-${k}-btn`).addEventListener('click', () => {
-      $(`mobile-${k}-submenu`).classList.toggle('hidden');
-      $(`mobile-${k}-arrow`).classList.toggle('rotate-180');
-    });
-  });
-</script>
-
-</body>
+        <section class="advisor-block"><h2 class="leadership-section-title">Our Advisors</h2><div class="people-cards"><article class="leader-card advisor"><img src="https://static.wixstatic.com/media/d8734e_c48d32b270564283856cf049ebee52b6~mv2.jpg/v1/fill/w_360,h_360,al_c,lg_1,q_80,enc_avif,quality_auto/4_edited.jpg" alt="Nirmesh Mehta"><div class="leader-card-content"><h3>Nirmesh Mehta</h3><p>Founding Member &amp; Advisor</p></div></article><article class="leader-card advisor"><img src="https://static.wixstatic.com/media/d8734e_d30ee967bd784d28b3950e544ff37207~mv2.jpg/v1/fill/w_600,h_400,al_c,q_85,enc_avif,quality_auto/GroupPhoto.JPG" alt="LCCWA advisor"><div class="leader-card-content"><h3>Vatsal Modi</h3><p>Advisor</p></div></article></div></section>
+      </section>
+    </main>
+    <footer id="site-footer"></footer><script src="site-shell.js"></script>
+  </body>
 </html>
